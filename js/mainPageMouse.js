@@ -4,7 +4,7 @@ let lastExT = 0;
 function pageEffect(e) {
     const curT = performance.now(); // https://developer.mozilla.org/en-US/docs/Web/API/Performance/now
 
-    if (curT - lastExT >= 33) { // 33+ ms
+    if (curT - lastExT >= 20) { // 20+ ms
         const mouseX = e.clientX;
 
         let carFrame = Math.round(45 * (mouseX / screen.width));
