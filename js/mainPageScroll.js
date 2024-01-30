@@ -35,8 +35,8 @@ function pageEffect(e) {
             vacFrame = 90;
         }
         
-        let carUrl = "/CF-Personal-Site/img/truckPngs/" + carFrame.toString() + ".png";
-        let vacUrl = "/CF-Personal-Site/img/vacPngs/" + vacFrame.toString() + ".png";
+        let carUrl = "img/truckPngs/" + carFrame.toString() + ".png";
+        let vacUrl = "img/vacPngs/" + vacFrame.toString() + ".png";
 
         const newCarImg = new Image();
         newCarImg.src = carUrl;
