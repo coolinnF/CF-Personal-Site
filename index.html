@@ -3,26 +3,27 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=100, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Colin Fairborn</title>
-    <link href="css/general.css" rel="stylesheet" />
-    <script src="js/preload.js" defer></script>
+    <link href="./css/general.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="header">
-        <h1>Hi, I'm Colin Fairborn</h1>
-    </div>
     <div id="aboutMe">
-        <p id="aboutMeText">I am studying Computer Science at Whitworth University and am a 3D art hobbyist. I hope you enjoy my work!</p>
+        <h1>Hi, I'm Colin Fairborn</h1>
+        <p>I am studying Computer Science at Whitworth University and am a 3D art hobbyist. I hope you enjoy my work!</p>
     </div>
-    <div id="myWork" style="align-content: center;">   
+    <div id="myWork" style="align-content: center;">
         <div id="carAnim">
+            <video src="img/truckRotate.mp4" alt="Render of mini truck rotating"/>
+        </div>
+        <!-- <div id="carAnim">
             <img src="img/truckPngs/45.png"/>
         </div>
         <p>Mini Truck for 3D Animation Competition [2022]</p>
         <div id="vacAnim">
             <img src="img/vacPngs/1.png"/>
         </div>
-        <p>Tuner Vacuum Model [personal project]</p>
+        <p>Tuner Vacuum Model [personal project]</p> -->
     </div>
     <div id="footer">
         <h2>You can reach me here:</h2>
@@ -36,7 +37,26 @@
         </div>
       </div>
     <!-- <script src="js/mainPageMouse.js"></script> -->
-    <script src="js/mainPageScroll.js"></script>
-    <script src="js/jquery-1.11.1.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+    ></script>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+        integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"
+        integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"
+        integrity="sha512-mq6TSOBEH8eoYFBvyDQOQf63xgTeAk7ps+MHGLWZ6Byz0BqQzrP+3GIgYL+KvLaWgpL8XgDVbIRYQeLa3Vqu6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/scrollApp.js"></script>
 </body>
 </html>
