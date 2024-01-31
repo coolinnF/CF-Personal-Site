@@ -49,6 +49,17 @@ h1 {
     text-shadow: 0px 0px 10px rgba(169, 202, 255, 0.272);
 }
 
+h2 {
+  font: "Arial-Black";
+  font-size: 4vw;
+
+  background: -webkit-radial-gradient(circle, #83c3ff, #869df7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 8px rgba(203, 169, 255, 0.33);
+}
+
 p {
     font: "Arial";
     font-size: 20px;
@@ -105,7 +116,6 @@ p#aboutMeText {
 div#myWork {
   display: flex;
   flex-direction: column;
-  width: fit-content;
   height: auto;
   justify-content: center;
   align-self: center; 
@@ -155,12 +165,14 @@ div#prevClasses>list>ul>li {
 }
 
 div#carAnim {
-  position: flex;
+  display: flex;
+  flex-basis: 100%;
   background-color: transparent;
 }
 
 div#vacAnim {
-  position: flex;
+  display: flex;
+  flex-basis: 100%;
   background-color: transparent;
 }
 
@@ -168,4 +180,9 @@ div#vacAnim {
   h1 {
       font-size: 80px;
   }
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
 }
