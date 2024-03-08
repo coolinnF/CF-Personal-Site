@@ -91,6 +91,12 @@ a {
     color: #bf76ff;
 }
 
+.btn-container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
 .rounded-button {
   background-color: #180d35;
   color: #000000;
@@ -211,15 +217,4 @@ div#vacAnim {
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #2b064045;
-  padding: 10px;
-  border: 1px solid #ffffff12;
-  border-radius: 4px;
-  cursor: pointer;
 }
