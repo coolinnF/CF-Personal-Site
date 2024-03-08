@@ -2,34 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=100, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Colin Fairborn</title>
     <link href="css/general.css" rel="stylesheet" />
-    <script src="js/preload.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="header">
         <h1>Hi, I'm Colin Fairborn</h1>
     </div>
     <div id="aboutMe">
-        <p id="aboutMeText">I am studying Computer Science at Whitworth University and am a 3D art hobbyist. I hope you enjoy my work!</p>
+        <p id="aboutMeText">I am studying Computer Science at Whitworth University and am a 3D artist. I hope you enjoy my work!</p>
     </div>
-    <div id="myWork" style="align-content: center;">   
-        <div id="carAnim">
-            <img src="img/truckPngs/45.png"/>
-        </div>
-        <p>Mini Truck for 3D Animation Competition [2022]</p>
-        <!-- <div id="vacAnim">
-            <img src="img/vacPngs/1.png"/>
-        </div>
-        <p>Tuner Vacuum Model [personal project]</p> -->
-    </div>
+    <video id="carAnim" tabindex="0" preload="auto">
+        <source src="./img/minitruck.mp4"></source>
+    </video>
+    <!-- <video id="vacAnim" tabindex="0" preload="auto">
+        <source src="./img/vacrender.mp4"></source>
+    </video> -->
+    <button class="rounded-button"><a href="./codegallery.html"><h2>My Code Samples</h2></a></button>
     <div id="footer">
         <h2>You can reach me here:</h2>
         <div id="contactLinks">
           <a href="mailto:cfairborn23@my.whitworth.edu">Email</a></br>
-          <a href="https://discordapp.com/users/600034197704409109">Discord</a></br>
+          <a href="https://discordapp.com/users/600034197704409109" class="fa-brands fa-discord"></a>
+          <i class="fa-brands fa-discord" style="color: #B197FC;"></i>
           <a href="https://www.linkedin.com/in/colin-fairborn-a559a72aa/">LinkedIn</a></br>
+          <a href="https://discordapp.com/users/600034197704409109">Discord</a></br>
         </div>
         <div id="education-link">
           <a href="education.html">My Education</a>

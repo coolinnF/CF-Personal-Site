@@ -16,27 +16,27 @@ body {
     -webkit-animation: AnimateBG 20s infinite;
 }
 @keyframes AnimateBG { /* Animation for non webkit browsers */
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @-webkit-keyframes AnimateBG { /* Animation for webkit browsers */
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 h1 {
     font: "Arial-Black";
@@ -50,6 +50,17 @@ h1 {
 }
 
 h2 {
+  font: "Arial-Black";
+  font-size: 4vw;
+
+  background: -webkit-radial-gradient(circle, #83c3ff, #869df7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 8px rgba(203, 169, 255, 0.33);
+}
+
+h3 {
   font: "Arial-Black";
   font-size: 4vw;
 
@@ -78,6 +89,17 @@ a {
     font-weight: light;
     text-align: center;
     color: #bf76ff;
+}
+
+.rounded-button {
+  background-color: #180d35;
+  color: #000000;
+  border: none;
+  padding: 1vw; /* Adjust padding for medium/large size */
+  font-size: 4vw; /* Adjust font size for easy readability */
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10px; /* Rounded corners */
 }
 
 list {
@@ -182,7 +204,11 @@ div#vacAnim {
   }
 }
 
-img {
-  width: 100%;
-  object-fit: contain;
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
 }

@@ -7,54 +7,60 @@ let vacElement = document.getElementById("vacAnim");
 let carOffset = carElement.offsetTop;
 let vacOffset = vacElement.offsetTop;
 
-let carDist = carOffset + carElement.offsetHeight; // Use offsetHeight to get the height as a number
-let vacDist = vacOffset + vacElement.offsetHeight;
-
 let carH = carElement.offsetHeight;
 let vacH = vacElement.offsetHeight;
 
-function pageEffect(e) {
-    const curT = performance.now(); // https://developer.mozilla.org/en-US/docs/Web/API/Performance/now
-    
-    if (curT - lastExT >= 33 || (scrollTop - window.scrollY) > 20) { // 33+ ms
-        scrollTop = window.scrollY;
+let carMT = carElement.duration;
+let vacMT = vacElement.duration;
 
-        let carFrame = Math.round(45 * ((scrollTop + 100 - carOffset) / (carH * 1.4)));
-        let vacFrame = Math.round(90 * ((scrollTop + 100 - vacOffset) / (vacH * 0.8)));
+function Scroll() {
+  var windowHeight = jQuery(document).height();
+  var currentPosition = jQuery(document).scrollTop();
+  var windowViewingArea = jQuery(window).height();
+  var bottomScrollPosition = currentPosition + windowViewingArea;
 
-        if (carFrame <= 0) {
-            carFrame = 1;
-        }
-        else if (carFrame > 45) {
-            carFrame = 45;
-        }
-        if (vacFrame <= 0) {
-            vacFrame = 1;
-        }
-        else if (vacFrame > 90) {
-            vacFrame = 90;
-        }
-        
-        let carUrl = "img/truckPngs/" + carFrame.toString() + ".png";
-        let vacUrl = "img/vacPngs/" + vacFrame.toString() + ".png";
+  var percentScrolled = parseInt((bottomScrollPosition / windowHeight * 100).toFixed(3));
+  console.log(percentScrolled)
 
-        const newCarImg = new Image();
-        newCarImg.src = carUrl;
-        newCarImg.style.display = 'none';
-
-        const newVacImg = new Image();
-        newVacImg.src = vacUrl;
-        newVacImg.style.display = 'none';
-
-        newCarImg.onload = function() {
-            newVacImg.onload = function() {
-                document.getElementById("carAnim").innerHTML = "<img src='" + carUrl + "' />";
-                document.getElementById("vacAnim").innerHTML = "<img src='" + vacUrl + "' />";
-            };
-        };
-
-        lastExT = curT;
-    }
+  if ((carMT * (percentScrolled / 100)) && (vacMT * (percentScrolled / 100))){
+    carElement.currentTime = (carMT * (percentScrolled / 100)).toPrecision(5);
+    vacElement.currentTime = (vacMT * (percentScrolled / 100)).toPrecision(5);
+  }
 }
 
-document.addEventListener('scroll', pageEffect);
+
+// function pageEffect(e) {
+//     const curT = performance.now(); // https://developer.mozilla.org/en-US/docs/Web/API/Performance/now
+    
+//     if (curT - lastExT >= 33 || (jQuery(document).scrollTop() - jQuery(window).height()) > 20) { // 33+ ms
+//         scrollTop = window.scrollY;
+
+//         let carT = (carMT * ((jQuery(document).scrollTop() - carOffset) / (carOffset + carH))).toPrecision(5);
+//         let vacT = (vacMT * ((jQuery(document).scrollTop() - vacOffset) / (vacOffset + vacH))).toPrecision(5);
+
+//         console.log(carT);
+//         console.log(vacT);
+
+//         if (carT < 0) {
+//             carT = 0;
+//         }
+//         else if (carT > carMT) {
+//             carT = carMT;
+//         }
+//         if (vacT < 0) {
+//             vacT = 0;
+//         }
+//         else if (vacT > vacMT) {
+//             vacT = vacMT;
+//         }
+//         if (Number.isFinite(carT)){
+//             miniTrck.currentTime = carT.toPrecision(5);
+//         }
+//         if (Number.isFinite(vacT)){
+//             vacElem.currentTime = vacT.toPrecision(5);
+//         }
+//     }
+// }
+
+window.addEventListener("touchmove", Scroll, false);
+window.addEventListener("scroll", Scroll, false);
